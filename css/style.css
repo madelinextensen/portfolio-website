@@ -1,0 +1,47 @@
+/* Colors used:
+Light green #b9e49b
+Dark green  #3faa64
+Light purple  #e8d7f4
+Dark purple #c3a8d6
+Off-white #f3f1f0
+Off-black #363636
+*/
+
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+body {
+  background-color: #b9e49b;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: 4a4a4a;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+img{
+  width: 100%;
+}
