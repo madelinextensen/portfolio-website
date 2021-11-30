@@ -45,3 +45,21 @@ h4 {
 img{
   width: 100%;
 }
+
+a {
+  color: #3faa64;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c3a8d6;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #363636;
+}
+
+a:active {
+  color: e8d7f4;
+}
