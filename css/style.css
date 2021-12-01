@@ -50,6 +50,10 @@ img {
   width: 100px;
 }
 
+.social-logo {
+  width: 50px;
+}
+
 a {
   color: #3faa64;
   text-decoration: none;
@@ -99,4 +103,10 @@ a:active {
 .button.contact:hover {
   background-color: #c3a8d6;
   color: #ffffff;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
