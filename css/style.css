@@ -7,10 +7,10 @@ Off-white #f3f1f0
 Off-black #363636
 */
 
-<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+<link href="https://fonts.google.com/share?selection.family=Rubik:wght@400;700" rel="stylesheet">
 
 body {
-  background-color: #b9e49b;
+  background-color: #f3f1f0;
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -42,8 +42,12 @@ h4 {
   font-weight: 400;
 }
 
-img{
+img {
   width: 100%;
+}
+
+.logo {
+  width: 100px;
 }
 
 a {
@@ -87,12 +91,12 @@ a:active {
 
 .button.contact {
   background-color: transparent;
-  color: #ff7f50;
+  color: #c3a8d6;
   text-transform: uppercase;
   border: 2px solid #000000
 }
 
 .button.contact:hover {
-  background-color: #ff7f50;
+  background-color: #c3a8d6;
   color: #ffffff;
 }
