@@ -7,15 +7,27 @@ Off-white #f3f1f0
 Off-black #363636
 */
 
-<link href="https://fonts.google.com/share?selection.family=Rubik:wght@400;700" rel="stylesheet">
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: #f3f1f0;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
   color: #4a4a4a;
+}
+
+header {
+  background-color: #b9e49b;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 8px 5px 0px rgba(50, 118, 50, 0.6);
+  position: fixed;
+  display: inline-block;
+  width: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -47,10 +59,10 @@ img {
 }
 
 .logo {
-  width: 100px;
+  max-width: 100px;
 }
 
-.social-logo {
+.social-links {
   width: 50px;
 }
 
@@ -74,7 +86,7 @@ a:focus {
 }
 
 a:active {
-  color: e8d7f4;
+  color: #e8d7f4;
 }
 
 .button {
@@ -97,7 +109,7 @@ a:active {
   background-color: transparent;
   color: #c3a8d6;
   text-transform: uppercase;
-  border: 2px solid #000000
+  border: 2px solid #000000;
 }
 
 .button.contact:hover {
@@ -105,8 +117,110 @@ a:active {
   color: #ffffff;
 }
 
-ul.no-bullets {
+/* Layout styling */
+.container {
+  padding: 0 15px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 25px 0;
+}
+
+#hero h1 {
+  text-align: center;
+}
+
+nav > ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #363636;
+}
+
+nav {
+  display: inline-block;
+  width: 100%;
+}
+
+nav > ul > li > a:visited {
+  color: #363636;
+}
+
+nav > ul > li > a:hover {
+  color: #c3a8d6;
+}
+
+nav > ul > li > a:active {
+  color: #3faa64;
+}
+
+#hero {
+  background-color: #f3f1f0;
+  padding: 20px 50px;
+  display: inline-block;
+  width: 100%;
+}
+
+main {
+  margin-top: 190px;
+}
+
+#work {
+  background-color: #f3f1f0;
+}
+
+footer {
+  background-color: #e8d7f4;
+  padding: 10px;
+  text-align: center;
+  border-top: 4px;
+  border-color: #c3a8d6;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+#contact ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#contact ul > li {
+  display: inline;
+  text-align: center;
+}
+
+.button.contact {
+  display: inline-block;
+}
+
+.about.me {
+  max-width: 300px;
+  float: left;
+  padding: 15px;
+}
+
+#contact .container {
+  display: inline;
+}
+
+
+.list-inline {
+  list-style: none;
+  padding: 0;
+}
+
+.list-inline > li {
+  display: inline;
 }
