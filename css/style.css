@@ -38,6 +38,7 @@ header {
   position: fixed;
   display: inline-block;
   width: 100%;
+  vertical-align: middle;
 }
 
 h1, h2, h3, h4 {
@@ -104,13 +105,14 @@ a:active {
 .button {
   display: inline-block;
   background-color: #b9e49b;
+  text-decoration: none;
   color: #ffffff;
   font-weight: 700;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid #3faa64;
-  transition: 0.2s opacity;
   margin: 10px 0;
+  transition: 0.2s opacity;
 }
 
 .button:hover {
@@ -135,13 +137,17 @@ a:active {
 
 /* Layout styling */
 .container {
-  padding: 0 15px;
-  max-width: 1300px;
-  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .row {
   margin: 25px 0;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 #hero h1 {
@@ -183,9 +189,14 @@ nav > ul > li > a:active {
 
 #hero {
   background-color: #f3f1f0;
-  padding: 20px 50px;
+  padding: 20px 20px;
   display: inline-block;
   width: 100%;
+  text-align: center;
+}
+
+#hero span {
+  display: block;
 }
 
 main {
@@ -205,6 +216,7 @@ footer {
   position: relative;
   display: inline-block;
   width: 100%;
+  vertical-align: middle;
 }
 
 #contact ul {
@@ -230,7 +242,6 @@ footer {
   display: inline;
 }
 
-
 .list-inline {
   list-style: none;
   padding: 0;
@@ -238,4 +249,119 @@ footer {
 
 .list-inline > li {
   display: inline;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 0 20px;
+}
+
+/*==============================
+COFFEE ANIMATION
+==============================*/
+.coffee-illustration {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.power {
+  animation: scale-up-ver-bottom 8s steps(6, end) infinite forwards, color-change 8s infinite alternate linear;
+}
+
+@keyframes color-change {
+  0% {fill: #E2472B;}
+  50% {fill: #ffea00;}
+  100% {fill: #00e600;}
+}
+
+@keyframes scale-up-ver-bottom {
+  0% {
+    transform: scaleY(1);
+    transform-origin: 0% 100%;
+  }
+  100% {
+    transform: scaleY(1.4);
+    transform-origin: 0% 100%;
+  }
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+
+header {
+  text-align: unset;
+  padding-left: 50px;
+}
+
+nav {
+  width: auto;
+  float: right;
+  margin-top: 20px;
+}
+
+main {
+  padding-top: 99px;
+  font-size: 18px;
+  margin-top: 99px;
+}
+
+#hero {
+  padding: 20px 50px;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+#about-page h3 {
+  margin-top: 0;
+}
+}
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.col-lg-4 {
+  width: 33.33%;
+}
+
+.col-lg-5 {
+  width: 41.66%;
+}
+
+.col-lg-7 {
+  width: 58.33%;
+}
+
+.col-lg-8 {
+  width: 66.66%;
+}
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+
+nav {
+    width: auto;
+    float: right;
+    margin-top: 20px;
+  }
+
+main {
+    max-width: 1300px;
+    font-size: 20px;
+  }
 }
