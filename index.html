@@ -7,29 +7,33 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="https://kit.fontawesome.com/b4f5f0d36f.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <header>
-            <div class="container">
-                <img src="img/portfolio-logo.svg" alt="Logo" class="logo" />
+            <div id="header" class="container">
+              <div class="navtoggle" id="myNavtoggle">
+                <a href="index.html">
+                  <img src="img/portfolio-logo.svg" alt="Logo" class="logo" /></a>
                 <nav>
                     <ul>
                         <li><a href="about.html">About</a></li>
                         <li><a href="index.html">My Work</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
                         <li><a href="plutopay.html">PlutoPay</a></li>
+                        <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
                     </ul>
                 </nav>
+                </div>
             </div>
         </header>
 
-        <main id="hero">
+        <main id="index-hero">
             <div class="container">
-                <div>
+                <div class="center">
                     <div>
-                        <h1>Hi, I'm Madeline</h1>
-                        <span>I'm a UX Designer from Houston, TX.</span>
+                        <h2>Hi, I'm Madeline, a UX Designer from Houston, TX.</h2>
                         <p>
                             I'm Madeline, a curious and analytical User Experience Designer who applies human-centered design thinking to create innovative and gratifying solutions to any user problem. Successful track record of motivating
                             consumers to meet various business goals through creative design.
@@ -50,7 +54,7 @@
                         <div class="column col-md-6 col-lg-5">
                             <h3>PlutoPay Web App Design</h3>
                             <p>Designed PlutoPay, an entertaining web application that teaches teenagers how to manage their finances, using the user-centered design process.</p>
-                            <a href="#" class="button">Read More</a>
+                            <a href="plutopay.html" class="button">Read More</a>
                         </div>
                     </div>
                     <br />
@@ -413,7 +417,7 @@
                             </div>
                             <div class="column col-md-6 col-lg-5">
                                 <h3>CSS Animation</h3>
-                                <p>This is a CSS animation.</p>
+                                <p>I run on coffee. </p>
                             </div>
                         </div>
                     </div>
@@ -448,6 +452,7 @@
             </div>
         </footer>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
 
     </body>

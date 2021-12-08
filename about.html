@@ -7,27 +7,32 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="https://kit.fontawesome.com/b4f5f0d36f.js" crossorigin="anonymous"></script>
     </head>
 
     <body id="about-page">
         <header>
             <div class="container">
-                <img src="img/portfolio-logo.svg" alt="Logo" class="logo" />
+              <div class="navtoggle" id="myNavtoggle">
+                <a href="index.html">
+                  <img src="img/portfolio-logo.svg" alt="Logo" class="logo" /></a>
                 <nav>
                     <ul>
                         <li><a href="about.html">About</a></li>
                         <li><a href="index.html">My Work</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
                         <li><a href="plutopay.html">PlutoPay</a></li>
+                        <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
                     </ul>
                 </nav>
+              </div>
             </div>
         </header>
 
-        <main id="hero">
+        <main id="about-hero">
             <div class="container">
-                <div>
-                    <h1>About</h1>
+                <div class="center">
+                    <h1>About Me</h1>
                 </div>
 
                 <div class="row">
@@ -36,6 +41,7 @@
                             <source srcset="img/madeline1x.jpeg" media="(max-width:767px)" />
                             <img src="img/madeline2x.jpeg" alt="picture of Madeline" />
                         </picture>
+                        <a href="files/resume.pdf" target="_blank" class="button">Download My Resume</a>
                     </div>
                     <div class="column col-md-6 col-lg-8">
                         <p>
@@ -49,29 +55,28 @@
                             <br />
                             I am passionate about social justice and human rights issues, protecting the environment, and learning something new every day.
                         </p>
-                        <a href="files/resume.pdf" target="_blank" class="button">Download My Resume</a>
                     </div>
                 </div>
                 <div class="row">
-                    <div>
+                    <div class="center">
                         <h2>Skills & Tools</h2>
                         <div class="column col-md-6 col-lg-6">
                             <h3>Relevant Skills</h3>
-                            <ul>
+                            <ul class="no-list">
                                 <li>Wireframing & Prototyping</li>
                                 <li>User Flows</li>
                                 <li>User Testing</li>
                                 <li>User Research</li>
                             </ul>
                         </div>
-                    </div>
                     <div class="column col-md-6 col-lg-6">
                         <h3>Toolbox</h3>
-                        <ul>
+                        <ul class="no-list">
                             <li>Adobe Creative Suite</li>
                             <li>Figma</li>
                             <li>WordPress</li>
                         </ul>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -103,5 +108,9 @@
                 <p>Copyright&copy; Madeline Christensen 2021</p>
             </div>
         </footer>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+
     </body>
 </html>

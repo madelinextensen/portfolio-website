@@ -7,19 +7,13 @@ Off-white #f3f1f0
 Off-black #363636
 */
 
+/*=================================================
+GENERAL STYLING
+=================================================*/
+
 * {
   box-sizing: border-box;
 }
-
-body {margin: 0; padding: 0; font-size: 100%; line-height: 1.6}
-h1, h2, h3, h4 {margin: 1em 0 .5em; line-height: 1.4}
-h1 {font-size: 2.75em}
-h2 {font-size: 2.5em}
-h3 {font-size: 2.25em}
-ul, ol {margin: 1em 0; padding-left: 40px}
-p, figure {margin: 1em 0}
-a img {border: none}
-sup, sub {line-height: 0}
 
 body {
   background-color: #f3f1f0;
@@ -32,11 +26,10 @@ body {
 
 header {
   background-color: #b9e49b;
-  padding: 10px;
-  text-align: center;
+  padding: 10px 4px;
   box-shadow: 0px 8px 5px 0px rgba(50, 118, 50, 0.6);
   position: fixed;
-  display: inline-block;
+  display: inline;
   width: 100%;
   vertical-align: middle;
 }
@@ -56,14 +49,32 @@ h2 {
 }
 
 h3 {
-  font-size: 1.75em;
-  font-weight: 400;
+  font-size: 1.5em;
+  font-weight: 700;
 }
 
 h4 {
   font-size: 1.35em;
   font-weight: 400;
 }
+
+h5 {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.center {
+  text-align: center;
+}
+
+.no-list {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+/*=================================================
+IMAGE STYLING
+=================================================*/
 
 img {
   width: 100%;
@@ -73,11 +84,26 @@ img {
   max-width: 100px;
 }
 
+.about.me img {
+  max-width: 300px;
+  padding: 15px;
+}
+
 .social-links img {
   display: inline;
   width: 50px;
   margin: 10px;
 }
+
+.user {
+  max-width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
+/*=================================================
+LINK STYLING
+=================================================*/
 
 a {
   color: #3faa64;
@@ -102,13 +128,17 @@ a:active {
   color: #e8d7f4;
 }
 
+/*=================================================
+BUTTON STYLING
+=================================================*/
+
 .button {
   display: inline-block;
   background-color: #b9e49b;
   text-decoration: none;
   color: #ffffff;
   font-weight: 700;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 3px;
   border-bottom: 2px solid #3faa64;
   margin: 10px 0;
@@ -135,7 +165,10 @@ a:active {
   color: #ffffff;
 }
 
-/* Layout styling */
+/*=================================================
+LAYOUT STYLING
+=================================================*/
+
 .container {
   padding: 0 10px;
   max-width: 1080px;
@@ -144,6 +177,13 @@ a:active {
 
 .row {
   margin: 25px 0;
+  vertical-align: middle;
+}
+
+.section {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  vertical-align: middle;
 }
 
 .row::after {
@@ -152,17 +192,15 @@ a:active {
   display: table;
 }
 
-#hero h1 {
-  text-align: center;
-}
-
 nav > ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 nav > ul > li {
-  display: inline-block;
+  list-style-type: none;
+  padding: 0;
 }
 
 nav > ul > li > a {
@@ -170,11 +208,6 @@ nav > ul > li > a {
   text-transform: uppercase;
   font-weight: 700;
   color: #363636;
-}
-
-nav {
-  display: inline-block;
-  width: 100%;
 }
 
 nav > ul > li > a:visited {
@@ -189,7 +222,45 @@ nav > ul > li > a:active {
   color: #3faa64;
 }
 
-#hero {
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid #3faa64;
+  text-align: center;
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding: 10px 10px;
+}
+
+.navtoggle {
+  vertical-align: middle;
+}
+
+#index-hero {
   background-color: #f3f1f0;
   padding: 20px 20px;
   display: inline-block;
@@ -197,17 +268,21 @@ nav > ul > li > a:active {
   text-align: center;
 }
 
-#hero span {
+#index-hero span {
   display: block;
 }
 
 main {
-  margin-top: 190px;
+  margin-top: 60px;
 }
 
 #work {
   background-color: #f3f1f0;
 }
+
+/*=================================================
+FOOTER STYLING
+=================================================*/
 
 footer {
   background-color: #e8d7f4;
@@ -235,13 +310,9 @@ footer {
   display: inline-block;
 }
 
-.about.me img {
-  max-width: 300px;
-  padding: 15px;
-}
-
 #contact .container {
   display: inline;
+  text-align: center;
 }
 
 .list-inline {
@@ -256,6 +327,59 @@ footer {
 [class*="col-"] {
   float: left;
   padding: 0 20px;
+}
+
+/*ABOUT===========================================================*/
+#about-hero {
+  background-color: #f3f1f0;
+  padding: 20px 20px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+#about-hero .container {
+  text-align: left;
+}
+
+/*PLUTOPAY========================================================*/
+#plutopay-hero {
+  background-color: #f3f1f0;
+  padding: 20px 20px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+#plutopay-hero .container {
+  text-align: center;
+}
+
+#plutopay-hero span {
+  display: block;
+}
+
+#plutopay-role .row {
+  background-color: #b9e49b;
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#plutopay-role .column {
+  padding: 10px 50px;
+}
+#plutopay-role h3 {
+  margin: none;
+}
+
+.plutopay-icon {
+  max-width: 75px;
+}
+
+#retrospective .row {
+  background-color: #b9e49b;
+  padding: 20px;
 }
 
 /*==============================
@@ -296,18 +420,36 @@ Medium devices (640px and larger)
 header {
   text-align: unset;
   padding-left: 50px;
+  vertical-align: middle;
 }
 
 nav {
   width: auto;
   float: right;
-  margin-top: 20px;
+  margin-top: 0;
+}
+
+nav > ul {
+  margin: 1em 0;
+}
+
+nav > ul > li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+
+.navtoggle li:last-child {
+  display: none;
 }
 
 main {
   padding-top: 99px;
   font-size: 18px;
-  margin-top: 99px;
+  margin-top: 80px;
 }
 
 #hero {
@@ -322,16 +464,26 @@ main {
   margin-top: 0;
 }
 }
-}
 
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
 
+header {
+    text-align: unset;
+    padding: 10px;
+    vertical-align: middle;
+  }
+
+main {
+  font-size: 20px;
+}
+
 .container {
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
+  text-align: left;
 }
 
 .col-lg-4 {
@@ -349,6 +501,33 @@ Large devices (1024px or larger)
 .col-lg-8 {
   width: 66.66%;
 }
+
+nav {
+  display: inline-block;
+  font-size: 20px;
+}
+
+nav > ul {
+  margin: 1em 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+
+.navtoggle li:last-child {
+  display: none;
+}
+
+.logo {
+  max-width: 125px;
+  padding-top: 10px;
+}
+
 }
 
 /* ==============================
@@ -369,5 +548,9 @@ nav {
 .container {
     max-width: 1400px;
     margin: 0 auto;
+  }
+
+  .logo {
+    max-width: 150px;
   }
 }
