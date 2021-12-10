@@ -39,17 +39,17 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2.75em;
+  font-size: 1.875em;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 2.25em;
+  font-size: 1.65em;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.45em;
   font-weight: 700;
 }
 
@@ -61,6 +61,7 @@ h4 {
 h5 {
   font-size: 1em;
   font-weight: 700;
+  margin: 0;
 }
 
 .center {
@@ -78,6 +79,12 @@ IMAGE STYLING
 
 img {
   width: 100%;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
@@ -101,6 +108,9 @@ img {
   margin: 0 auto;
 }
 
+.mockup {
+  max-height: 50%;
+}
 /*=================================================
 LINK STYLING
 =================================================*/
@@ -136,7 +146,7 @@ BUTTON STYLING
   display: inline-block;
   background-color: #b9e49b;
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
   font-weight: 700;
   padding: 10px 20px;
   border-radius: 3px;
@@ -268,6 +278,10 @@ nav > ul > li > a:active {
   text-align: center;
 }
 
+#index-hero div {
+  padding: 0 15px;
+}
+
 #index-hero span {
   display: block;
 }
@@ -278,6 +292,28 @@ main {
 
 #work {
   background-color: #f3f1f0;
+}
+
+.no-top-space {
+  padding-top: 0;
+  margin-top: 5px;
+}
+
+.vertical-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.full-width {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
 }
 
 /*=================================================
@@ -324,9 +360,8 @@ footer {
   display: inline;
 }
 
-[class*="col-"] {
-  float: left;
-  padding: 0 20px;
+.parent {
+  position: relative;
 }
 
 /*ABOUT===========================================================*/
@@ -348,11 +383,6 @@ footer {
   padding: 20px 20px;
   display: inline-block;
   width: 100%;
-  text-align: center;
-}
-
-#plutopay-hero .container {
-  text-align: left;
 }
 
 #plutopay-hero span {
@@ -362,11 +392,10 @@ footer {
 #plutopay-role .row {
   background-color: #b9e49b;
   padding: 20px;
-  text-align: center;
   vertical-align: middle;
 }
 
-#plutopay-role .column {
+#plutopay-role [.col*=] {
   padding: 10px 50px;
 }
 #plutopay-role h3 {
@@ -380,6 +409,11 @@ footer {
 #retrospective .row {
   background-color: #b9e49b;
   padding: 20px;
+}
+
+#plutopay-page [class*="col-"] {
+  float: left;
+  padding: 0 25px;
 }
 
 /*==============================
@@ -423,6 +457,11 @@ header {
   vertical-align: middle;
 }
 
+h1 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
 nav {
   width: auto;
   float: right;
@@ -456,12 +495,26 @@ main {
   padding: 20px 50px;
 }
 
+.col-md-4 {
+  width:33.33%;
+}
+
 .col-md-6 {
   width: 50%;
 }
 
+.col-md-8 {
+  width: 66.66%;
+}
+
 #about-page h3 {
   margin-top: 0;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 }
 
@@ -528,6 +581,12 @@ nav > ul > li {
   padding-top: 10px;
 }
 
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 }
 
 /* ==============================
@@ -545,8 +604,12 @@ nav {
     font-size: 20px;
   }
 
+  h1 {
+    font-size: 3em;
+  }
+
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
