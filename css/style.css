@@ -134,7 +134,7 @@ a:focus {
 }
 
 a:active {
-  color: #e8d7f4;
+  color: #3faa64;
 }
 
 /* =================================================
@@ -314,7 +314,7 @@ main {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .full-width {
