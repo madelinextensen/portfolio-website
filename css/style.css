@@ -392,6 +392,10 @@ footer {
   text-align: left;
 }
 
+#about-page .vertical-top {
+  flex-direction: row;
+}
+
 /* PLUTOPAY======================================================== */
 #plutopay-hero {
   background-color: #f3f1f0;
